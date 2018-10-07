@@ -1,6 +1,8 @@
 	
 
 <?php
+header('Content-Type: text/html; charset=utf-8');
+
 require_once "HTML/Template/IT.php";
 include 'db.php';
 // ligação à base de dados
