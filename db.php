@@ -1,6 +1,7 @@
 <?php
 
 header('Content-Type: text/html; charset=utf-8');
+mysql_set_charset('utf8');
 // mostra uma mensagem de erro vinda do mysql
 function showerror()
 {
