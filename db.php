@@ -13,7 +13,7 @@ $db_name = "db_a62362";
 //$db_user = "root";
 //$db_passwd = "";
 $db_user = "a62362";
-	$db_passwd = "GN848SS";//ku1hi
+	$db_passwd = "93abfd";//ku1hi
 
 
 // faz uma conexão a uma base de dados
