@@ -22,7 +22,7 @@ $nrows = mysql_num_rows($result);
 for($i=0; $i<$nrows; $i++) {
  	$tuple = mysql_fetch_array($result,MYSQL_ASSOC);
 
-	$query = "SELECT name FROM users where id=".$tuple['id'];
+	$query = "SELECT name FROM users where id=".$tuple['user_id'];
 	$result2 = @mysql_query($query,$db ); 
 	$tuple2 = mysql_fetch_array($result2,MYSQL_ASSOC);
  	// trabalha com o bloco FILMES do template
