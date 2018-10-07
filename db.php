@@ -4,9 +4,9 @@ function showerror()
 {
  die("Error " . mysql_errno() . " : " . mysql_error());
 }
-//$hostname = "10.10.23.183";
+$hostname = "10.10.23.183";
 
-$hostname = "127.0.0.1";
+//$hostname = "127.0.0.1";
  
 
 $db_name = "db_a62362";
