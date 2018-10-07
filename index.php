@@ -25,6 +25,9 @@ for($i=0; $i<$nrows; $i++) {
 	$query = "SELECT name FROM users where id=".$tuple['user_id'];
 	$result2 = @mysql_query($query,$db ); 
 	$tuple2 = mysql_fetch_array($result2,MYSQL_ASSOC);
+	// This is in the PHP file and sends a Javascript alert to the client
+$message =  $tuple2['name'] ;
+echo "<script type='text/javascript'>alert('$message');</script>";
  	// trabalha com o bloco FILMES do template
  	$template->setCurrentBlock("POSTS");
 
