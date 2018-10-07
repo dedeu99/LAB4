@@ -26,9 +26,10 @@ for($i=0; $i<$nrows; $i++) {
 
 
 
-	$query = "SELECT nome FROM users where id=".$tuple['user_id'];
+	$query = "SELECT name FROM users where id=".$tuple['user_id'];
 	$result2 = @mysql_query($query,$db ); 
 	$tuple2 = mysql_fetch_array($result2,MYSQL_ASSOC);
+
  	$template->setVariable('USER', $tuple2['nome'] );
 
 
