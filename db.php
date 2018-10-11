@@ -28,7 +28,7 @@ $db_user = "a62362";
 function dbconnect($hostname,
 $db_name,$db_user,$db_passwd)
 {
- $db = mysql_connect($hostname, $db_user,$db_passwd);
+ $db = @mysql_connect($hostname, $db_user,$db_passwd);
  if(!$db) {
  die("Nao consigo ligar ao servidor da base de
 dados.");

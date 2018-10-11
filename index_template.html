@@ -88,13 +88,22 @@
             <ul class="justify-content-sm-end nav navbar-dark ">
               <li class="nav-item">
                 <button class="btn btn-primary nav-link" data-toggle="modal" data-target="#detailsModal">Show Details</button>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Number of posts per page</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">5</a>
+                  <a class="dropdown-item" href="#">10</a>
+                  <a class="dropdown-item" href="#">25</a>
+                  <a class="dropdown-item" href="#">50</a>
+                </div>            
               </li> 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Order By</a>
                 <div class="dropdown-menu">
-                  <a class="dropdown-item" href="#">Older Posts</a>
                   <a class="dropdown-item" href="#">Most Recent Posts</a>
-                </div>
+                  <a class="dropdown-item" href="#">Older Posts</a>
+                </div>            
               </li>
             </ul>  
           </div>
@@ -111,13 +120,15 @@
               </span>
             <p>{USER}</p>
           </a>
+            <p>Created:</p>
+            <p>{CREATED}</p>
+            <p>Updated:</p>
             <p>{UPDATED}</p>
           </div>
           <div class="col-sm-9">
             <br>
             <p>{MICROPOST}</p>
           </div>
-          
         </div>
       <!-- END POSTS --> 
       </div>
@@ -126,15 +137,23 @@
 
         <nav>
           <ul class="pagination justify-content-end">
+            <!-- BEGIN RIGHTARROW -->
             <li class="page-item disabled">
               <a class="page-link" href="#" tabindex="-1">Previous</a>
             </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
+            <!-- BEGIN LEFTARROW -->
+            <!-- BEGIN RIGHTARROW -->
+            <li class="page-item disabled">
+              <a class="page-link" href="#" tabindex="-1">Previous</a>
             </li>
+            <!-- BEGIN PAGELINKS -->
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <!-- END PAGELINKS -->
+            <!-- BEGIN RIGHTARROW -->
+            <li class="page-item disabled">
+              <a class="page-link" href="#" >Next</a>
+            </li>
+            <!-- END RIGHTARROW -->
           </ul>
         </nav>
       

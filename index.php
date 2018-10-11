@@ -1,5 +1,4 @@
 	
-
 <?php
 header('Content-Type: text/html; charset=utf-8');
 
@@ -8,7 +7,7 @@ include 'db.php';
 // ligação à base de dados
 $db = dbconnect($hostname,$db_name,$db_user,$db_passwd);
  // criar query numa string
- $query = "SELECT * FROM microposts";
+ $query = "SELECT * FROM microposts ORDER BY created_at DESC";
  // executar a query
  $result = @ mysql_query($query,$db ); 
 
@@ -28,21 +27,15 @@ for($i=0; $i<$nrows; $i++) {
 	$result2 = @mysql_query($query,$db ); 
 	$tuple2 = mysql_fetch_array($result2,MYSQL_ASSOC);
 	// This is in the PHP file and sends a Javascript alert to the client
-$message =  $tuple2['name'] ;
-echo "<script type='text/javascript'>alert('$message');</script>";
+	$message =  $tuple2['name'] ;
+	echo "<script type='text/javascript'>alert('$message');</script>";
  	// trabalha com o bloco FILMES do template
  	$template->setCurrentBlock("POSTS");
-
-
-
-	
-
  	$template->setVariable('USER', $tuple2['name'] );
-
-
 
  	$template->setVariable('USERID', $tuple['user_id']);
  	$template->setVariable('UPDATED', $tuple['updated_at']);
+ 	$template->setVariable('CREATED', $tuple['created_at']);
 	$template->setVariable('MICROPOST', $tuple['content']);
 	// Faz o parse do bloco FILMES
  	$template->parseCurrentBlock();
